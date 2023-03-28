@@ -71,6 +71,8 @@ public class Movement : MonoBehaviour
         Debug.LogError("6");
         Debug.LogError("7");
         Debug.LogError("8");
+        Debug.LogError("9");
+        Debug.LogError("10");
     }
 
 
