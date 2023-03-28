@@ -40,7 +40,6 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        // characterAge = 11;
         // Debug.Log(characterAge);
         //
         // transform.position = new Vector3(0, 15, -2);
