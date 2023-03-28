@@ -61,7 +61,12 @@ public class Movement : MonoBehaviour
         return displacement;
     }
 
-    private void Print1To8()
+    public void TeleportEntity(Vector3 p_newPosition, Transform p_entity)
+    {
+        p_entity.position = p_newPosition;
+    }
+
+    private void Print1To9()
     {
         Debug.LogError("1");
         Debug.LogError("2");
