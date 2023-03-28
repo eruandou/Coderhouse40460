@@ -52,7 +52,7 @@ public class Movement : MonoBehaviour
     {
         p_movingEntity.position += CalculateDisplacement(p_movementDir, p_speed);
 
-        Print1To9();
+        Print1To8();
     }
 
     private Vector3 CalculateDisplacement(Vector3 p_movementDir, float p_speed)
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
         return displacement;
     }
 
-    private void Print1To9()
+    private void Print1To8()
     {
         Debug.LogError("1");
         Debug.LogError("2");
@@ -71,7 +71,6 @@ public class Movement : MonoBehaviour
         Debug.LogError("6");
         Debug.LogError("7");
         Debug.LogError("8");
-        Debug.LogError("9");
     }
 
 
