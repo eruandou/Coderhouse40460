@@ -19,7 +19,6 @@ public class Movement : MonoBehaviour
         // Debug.LogError("is speed valid? " + isSpeedValid);
         Debug.Assert(isSpeedValid, "Speed is invalid");
         Debug.Assert(nameIsValid, "Name is invalid");
-        Debug.Break();
     }
 
     public void SetCharacterName(string newName)
@@ -52,7 +51,7 @@ public class Movement : MonoBehaviour
     {
         p_movingEntity.position += CalculateDisplacement(p_movementDir, p_speed);
 
-        Print1To8();
+        Print1To9();
     }
 
     private Vector3 CalculateDisplacement(Vector3 p_movementDir, float p_speed)
