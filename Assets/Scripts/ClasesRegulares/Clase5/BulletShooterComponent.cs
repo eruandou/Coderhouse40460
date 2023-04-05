@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ClasesRegulares.Clase5
 {
-    public class BulletShooter : MonoBehaviour
+    public class BulletShooterComponent : MonoBehaviour
     {
         [SerializeField] private Bullet m_bulletToShoot;
         [SerializeField] private Transform m_shootingPoint;
