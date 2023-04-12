@@ -60,27 +60,7 @@ public class PlayerController : MonoBehaviour
         {
             Shoot();
         }
-        /*
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += transform.forward * (m_speed * Time.deltaTime);
-        }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position -= transform.forward * (m_speed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += transform.right * (m_speed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= transform.right * (m_speed * Time.deltaTime);
-        }
-*/
 
         bool l_isAlive = m_playerHealth > 0;
 
