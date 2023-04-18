@@ -23,6 +23,7 @@ namespace ClasesRegulares.Clase5
                 Destroy(gameObject);
             }
 
+            
             transform.position += m_speed * Time.deltaTime * transform.forward;
         }
     }

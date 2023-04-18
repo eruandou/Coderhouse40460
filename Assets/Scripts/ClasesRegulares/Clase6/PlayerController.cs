@@ -66,15 +66,15 @@ public class PlayerController : MonoBehaviour
 
         if ((l_isAlive || m_canShout) && IsValidName(m_playerName))
         {
-            Debug.Log("There's living activity");
+            // Debug.Log("There's living activity");
             // Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         }
 
         else
         {
-            Debug.Log("The character has died");
+            // Debug.Log("The character has died");
         }
 
-        Debug.Log("This is the player controller");
+        // Debug.Log("This is the player controller");
     }
 }
