@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool m_canShout;
     [SerializeField] private Bullet m_bullet;
     [SerializeField] private float m_timeToShoot = 1f;
+    [SerializeField] private float m_maxHealth = 100f;
+    [SerializeField] private float m_fallDamageThreshold;
+    [SerializeField] private float m_fallDamage = 2;
     private float m_currentTimeToShoot;
 
     private void Awake()
@@ -32,9 +35,24 @@ public class PlayerController : MonoBehaviour
         transform.position += p_direction * (m_speed * Time.deltaTime);
     }
 
-    private void TakeDamage(float p_damage)
+    public void TakeDamage(float p_damage)
     {
         m_playerHealth -= p_damage;
+
+        if (m_playerHealth < 0)
+        {
+            m_playerHealth = 0;
+        }
+    }
+
+    public void GetHeal(float p_healAmount)
+    {
+        m_playerHealth += p_healAmount;
+
+        if (m_playerHealth > m_maxHealth)
+        {
+            m_playerHealth = m_maxHealth;
+        }
     }
 
     private void Shoot()
@@ -76,5 +94,15 @@ public class PlayerController : MonoBehaviour
         }
 
         // Debug.Log("This is the player controller");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        var l_collisionSpeed = collision.impulse;
+
+        if (l_collisionSpeed.y > m_fallDamageThreshold)
+        {
+            TakeDamage(m_fallDamage);
+        }
     }
 }

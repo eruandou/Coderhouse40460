@@ -13,10 +13,10 @@ TagManager:
   - UI
   - Weapon
   - Wall
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - StaticCollisions
+  - Trap
+  - PlayerTrigger
   - 
   - 
   - 
