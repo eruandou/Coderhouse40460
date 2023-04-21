@@ -1,13 +1,15 @@
 using System;
+using AfterClass.After19_4;
 using UnityEngine;
 
 namespace ClasesRegulares.Clase5
 {
-    public class Bullet : MonoBehaviour
+    public class Bullet : MonoBehaviour, IDamageable
     {
         [SerializeField] private float m_speed;
         [SerializeField] private float m_initialTime = 3f;
         private float m_currentTime;
+        public float MaxHealth => 0;
 
         private void Awake()
         {
@@ -23,8 +25,13 @@ namespace ClasesRegulares.Clase5
                 Destroy(gameObject);
             }
 
-            
+
             transform.position += m_speed * Time.deltaTime * transform.forward;
+        }
+
+        public void TakeDamage(float p_damage)
+        {
+            Destroy(gameObject);
         }
     }
 }

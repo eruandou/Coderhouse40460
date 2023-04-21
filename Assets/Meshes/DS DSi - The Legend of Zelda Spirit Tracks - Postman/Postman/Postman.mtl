@@ -1,0 +1,16 @@
+newmtl mt_letter
+Ka 0.972549 0.972549 0.972549
+Kd 0.4705882 0.4705882 0.4705882
+d 1
+Tr 1
+map_Ka mt_letter.png
+map_Kd mt_letter.png
+map_d mt_letter.png
+newmtl mt_pstman
+Ka 0 0 0
+Kd 0.4705882 0.4705882 0.4705882
+d 1
+Tr 1
+map_Ka mt_pstman.png
+map_Kd mt_pstman.png
+map_d mt_pstman.png

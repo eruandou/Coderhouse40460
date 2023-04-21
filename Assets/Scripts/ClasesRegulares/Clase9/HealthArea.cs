@@ -1,22 +1,19 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using AfterClass.After19_4;
 using UnityEngine;
 
 public class HealthArea : MonoBehaviour
 {
     [SerializeField] private float m_healPerSecond;
 
+    
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.TryGetComponent(out IHealable l_healable))
         {
-            Debug.Log("Es un jugador");
-            var l_player = other.GetComponent<PlayerController>();
-            if (l_player != null)
-            {
-                l_player.GetHeal(m_healPerSecond * Time.fixedDeltaTime);
-            }
+            l_healable.GetHeal(m_healPerSecond * Time.fixedDeltaTime);
         }
     }
 }

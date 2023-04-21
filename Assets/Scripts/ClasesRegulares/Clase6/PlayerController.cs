@@ -1,8 +1,9 @@
 using System;
+using AfterClass.After19_4;
 using ClasesRegulares.Clase5;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDamageable, IHealable
 {
     [SerializeField] private float m_speed;
     [SerializeField] private float m_playerHealth;
@@ -44,6 +45,8 @@ public class PlayerController : MonoBehaviour
             m_playerHealth = 0;
         }
     }
+
+    public float MaxHealth => m_maxHealth;
 
     public void GetHeal(float p_healAmount)
     {
@@ -96,9 +99,14 @@ public class PlayerController : MonoBehaviour
         // Debug.Log("This is the player controller");
     }
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnCollisionEnter(Collision p_collision)
     {
-        var l_collisionSpeed = collision.impulse;
+        var l_collisionForce = p_collision.impulse.magnitude;
+
+
+        var l_collisionSpeed = p_collision.impulse;
+
 
         if (l_collisionSpeed.y > m_fallDamageThreshold)
         {

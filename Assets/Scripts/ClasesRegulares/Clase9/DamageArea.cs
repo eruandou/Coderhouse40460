@@ -1,4 +1,5 @@
 using System;
+using AfterClass.After19_4;
 using UnityEngine;
 
 namespace ClasesRegulares.Clase9
@@ -9,9 +10,14 @@ namespace ClasesRegulares.Clase9
 
         private void OnTriggerStay(Collider other)
         {
-            if (other.CompareTag("Player") && other.TryGetComponent(out PlayerController l_player))
+            // if (other.CompareTag("Player") && other.TryGetComponent(out PlayerController l_player))
+            // {
+            //     l_player.TakeDamage(m_damagePerSecond * Time.fixedDeltaTime);
+            // }
+
+            if (other.TryGetComponent(out IDamageable l_damageable))
             {
-                l_player.TakeDamage(m_damagePerSecond * Time.fixedDeltaTime);
+                l_damageable.TakeDamage(m_damagePerSecond * Time.fixedDeltaTime);
             }
         }
     }
