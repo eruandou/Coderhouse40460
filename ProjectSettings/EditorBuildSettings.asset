@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Clase13/Clase13_RaycastSingleton.unity
+    guid: eb02497c7e71c9741845db7019270f37
+  - enabled: 1
+    path: Assets/Scenes/Clase12/Clase12_Fisicas.unity
+    guid: 201c735a145d3744ba41135b3e8c1154
+  - enabled: 1
+    path: Assets/Scenes/Clase10/Clase10.unity
+    guid: 8c3bf8b9aa0a835488a580339ebc7130
+  - enabled: 1
+    path: Assets/Scenes/Clase9/Clase9Colisiones.unity
+    guid: db8a0104a23a49b449497444abc7cf7e
   m_configObjects: {}

@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour, IDamageable, IHealable
 
     private void Move(Vector3 p_direction)
     {
-        transform.position += p_direction * (m_speed * Time.deltaTime);
+        transform.position += ((transform.forward * p_direction.z) + (transform.right * p_direction.x)) *
+                              (m_speed * Time.deltaTime);
     }
 
     public void TakeDamage(float p_damage)

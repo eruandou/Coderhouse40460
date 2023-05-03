@@ -38,9 +38,13 @@ namespace ClasesRegulares.Clase8
 
         private void Update()
         {
-            Chase();
+            // Chase();
         }
 
+        public void KillEnemy()
+        {
+            Destroy(gameObject);
+        }
         private void Chase()
         {
             var l_diffVector = m_target.position - transform.position;
