@@ -1,0 +1,10 @@
+{
+    "currentHealth": 100.0,
+    "playerName": "Jorge",
+    "characterFloats": false,
+    "characterPosition": {
+        "x": 14.524528503417969,
+        "y": 3.070000171661377,
+        "z": -18.967683792114259
+    }
+}

@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour, IDamageable, IHealable
         var l_horizontal = Input.GetAxis("Horizontal");
         var l_vertical = Input.GetAxis("Vertical");
 
+
         var l_direction = new Vector3(l_horizontal, 0, l_vertical);
 
         Move(l_direction);

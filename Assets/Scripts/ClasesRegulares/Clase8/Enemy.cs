@@ -41,6 +41,11 @@ namespace ClasesRegulares.Clase8
             // Chase();
         }
 
+        public void SetTarget(Transform p_player)
+        {
+            m_target = p_player;
+        }
+
         public void KillEnemy()
         {
             Destroy(gameObject);

@@ -8,7 +8,7 @@ public class HealthArea : MonoBehaviour
 {
     [SerializeField] private float m_healPerSecond;
 
-    
+
     private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent(out IHealable l_healable))
